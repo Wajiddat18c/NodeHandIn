@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+    html{
+    margin-left: 20px;
+    }
+</style>
+<body>
+    <h1>My Rest-api example</h1>
+
+    <p>I have build an Array of JSON objects in my API</p>
+
+    <h4>GET method: <a href="/shop">Click here to get my api!</a></h4>
+    <p style="font-weight: bold;">Code Snippit:</p>
+    <!-- <div>
+        //GET ALL <br>
+        app.get("/shop", (req, res) => { <br>
+            return res.send({ response: shop }) <br>
+        }); <br>
+        //GET by ID <br>
+        app.get("/shop/:id", (req, res) => { <br>
+            const shopId = shop.find(shopId => shopId.id === Number(req.params.id)); <br>
+            return res.send({ response: shopId }); <br>
+        }); <br>
+    </div> -->
+    <img src="get.PNG">
+    <h4>POST method:</h4>
+    <br>
+    <p>If you want to post something to my api, then you can do it via Postman</p>
+    <p>Try to send a POST JSON body like this: <br>{
+       <br> "item": "ICE"	
+    <br>}
+</p>
+<p style="font-weight: bold;">Code Snippit:</p>
+<br>
+<!-- <div>
+    <br>
+app.post("/shop", (req, res) => {<br>
+    let newItem = req.body;<br>
+    newItem.id = ++currentId;<br>
+    shop.push(newItem);<br>
+    <br>
+    return res.sendStatus(200);<br>
+});<br>
+</div> -->
+<img src="post.PNG">
+
+<br>
+<h4>PUT method:</h4>
+<p>If you want to edit an already made JSON object, then you can use Postman to do</p>
+<p>Try to send a PUT JSON body like this:</p>
+<div>
+    {<br>
+        "type": "SUV",<br>
+        "brand": "JEEP",<br>
+        "id": 23<br>
+    }<br>
+</div>
+<p style="font-weight: bold;">Code Snippit:</p>
+<!-- <div>
+    app.put("/shop/:id", (req, res) => {<br>
+        const foundIndex = shop.findIndex(shopId => shopId.id === Number(req.params.id));<br>
+        delete req.body.id;<br>
+        <br>
+        const updateShop = { ...shop[foundIndex],...req.body };<br>
+        <br>
+        shop[foundIndex] = updateShop;<br>
+        return res.send({ response: shop});<br>
+        <br>
+    });<br>
+</div> -->
+<img src="put.PNG">
+
+<br>
+<h4>DELETE method:</h4>
+<p>If you want to DELETE, then use Postman to delete via ID</p>
+<p>Like this: localhost:3000/shop/1 to delete først shop item</p>
+<p style="font-weight: bold;">Code Snippit:</p>
+<!-- <div>
+    app.delete("/shop/:id", (req, res) => {<br>
+        shop = shop.filter(shopId => shopId.id !== Number(req.params.id));<br>
+        return res.send({ response : shop})<br>
+    });<br> 
+    
+</div> -->
+<img src="delete.PNG">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>

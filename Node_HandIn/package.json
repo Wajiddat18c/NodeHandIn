@@ -1,0 +1,24 @@
+{
+  "name": "express_assignment",
+  "version": "1.0.0",
+  "description": "This is an assignment for node class",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env PORT=80 node app.js",
+    "start-dev": "cross-env PORT=3000 nodemon app.js"
+  },
+  "keywords": [
+    "Kea"
+  ],
+  "author": "Wajid Ahmad",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2"
+  }
+}

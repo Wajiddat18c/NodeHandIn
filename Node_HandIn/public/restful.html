@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTful</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<style>
+    html{
+    margin-left: 20px;
+    }
+</style>
+<body>
+    
+    <h1>REST</h1>
+
+    <p>This page will contain some theory about REST and also show an example of how to build one using Express module.</p>
+
+    <h3>
+        Representational state transfer:
+
+    </h3>
+
+    <p>REST is an architectural style for providing standards between computer systems on the web, making it easier for systems to communicate with each other.
+        <br>The image down below shows an expample of how a rest web service works. 
+    </p>
+    
+    <img src="rest.png" alt="REST" style="width: 600px;">
+
+    <h4>This Table will explane all of the HTTP METHODS</h4>
+    <table class="table table-bordered">
+        <caption>https://en.wikipedia.org/wiki/Representational_state_transfer
+        </caption>
+        <tbody><tr>
+        <th>HTTP METHODS
+        </th>
+        <th>Collection resource, such as <code>https://api.example.com/collection/</code>
+        </th>
+        <th>Member resource, such as <code>https://api.example.com/collection/item3</code>
+        </th></tr>
+        <tr style="vertical-align:top;">
+        <th>GET
+        </th>
+        <td><i>Retrieve</i> the URIs of the member resources of the collection resource in the response body.
+        </td>
+        <td><i>Retrieve</i> representation of the member resource in the response body.
+        </td></tr>
+        <tr style="vertical-align:top;">
+        <th>POST
+        </th>
+        <td><i>Create</i> a member resource in the collection resource using the instructions in the request body. The URI of the created member resource is <i>automatically assigned</i> and returned in the response <i>Location</i> header field.
+        </td>
+        <td><i>Create</i> a member resource in the member resource using the instructions in the request body. The URI of the created member resource is <i>automatically assigned</i> and returned in the response <i>Location</i> header field.
+        </td></tr>
+        <tr style="vertical-align:top;">
+        <th>PUT
+        </th>
+        <td><i>Replace</i> all the representations of the member resources of the collection resource with the representation in the request body, or <i>create</i> the collection resource if it does not exist.
+        </td>
+        <td><i>Replace</i> all the representations of the member resource or <i>create</i> the member resource if it does not exist, with the representation in the request body.
+        </td></tr>
+        <tr style="vertical-align:top;">
+        <th>PATCH
+        </th>
+        <td><i>Update</i> all the representations of the member resources of the collection resource using the instructions in the request body, or <i>may create</i> the collection resource if it does not exist.
+        </td>
+        <td><i>Update</i> all the representations of the member resource, or <i>may create</i> the member resource if it does not exist, using the instructions in the request body.
+        </td></tr>
+        <tr style="vertical-align:top;">
+        <th>DELETE
+        </th>
+        <td><i>Delete</i> all the representations of the member resources of the collection resource.
+        </td>
+        <td><i>Delete</i> all the representations of the member resource.
+        </td></tr></tbody></table>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
