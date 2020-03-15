@@ -21,6 +21,12 @@ app.get("/commands", (req, res) => {
 
 });
 
+app.get("/basic", (req, res) => {
+
+    return res.sendFile(__dirname + "/public/basic.html")
+
+});
+
 app.get("/restful", (req, res) => {
 
     return res.sendFile(__dirname + "/public/restful.html")
@@ -117,3 +123,12 @@ const server = app.listen(port, (error) => {
     }
     console.log("This server is running on port", server.address().port);
 });
+
+
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+  }; // This is how you defind an object in Javascrpit
+    // This is also called name:value pairs 
